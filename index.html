@@ -1,0 +1,10 @@
+import os
+
+# Lấy đường dẫn của thư mục hiện tại
+current_directory = os.getcwd()
+
+# Lặp qua tất cả các tệp tin trong thư mục hiện tại và xóa chúng
+for filename in os.listdir(current_directory):
+    file_path = os.path.join(current_directory, filename)
+    if os.path.isfile(file_path):
+        os.remove(file_path)
